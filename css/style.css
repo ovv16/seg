@@ -1037,16 +1037,15 @@ body::after {
 }
 
 .no-webp .page-footer{
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("../img/content/2.jpg") 0 50% no-repeat; }
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("../img/content/2.jpg") 0 50%/cover no-repeat; }
 
 .no-webp .page-footer{
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../img/content/2.jpg") 0 50% no-repeat; }
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../img/content/2.jpg") 0 50%/cover no-repeat; }
 
 .no-webp .page-footer{
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../img/content/2.jpg") 0 50% no-repeat; }
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../img/content/2.jpg") 0 50%/cover no-repeat; }
 
 .page-footer {
-  background-size: cover;
   text-align: center;
   position: relative;
   margin-left: -15px;
@@ -1803,11 +1802,11 @@ body::after {
 
 .webp .header-page__two{ background: linear-gradient(to top, rgba(0, 0, 0, 0.5), #78B400), center no-repeat url(../img/content/2.webp); }
 
-.webp .page-footer{ background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url(../img/content/2.webp) 0 50% no-repeat; background-size: cover; }
+.webp .page-footer{ background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url(../img/content/2.webp) 0 50%/cover no-repeat; }
 
-.webp .page-footer{ background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50% no-repeat; background-size: cover; }
+.webp .page-footer{ background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50%/cover no-repeat; }
 
-.webp .page-footer{ background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50% no-repeat; background-size: cover; }
+.webp .page-footer{ background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50%/cover no-repeat; }
 
 @media (any-hover: hover){
 
