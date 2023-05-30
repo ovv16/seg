@@ -1803,11 +1803,11 @@ body::after {
 
 .webp .header-page__two{ background: linear-gradient(to top, rgba(0, 0, 0, 0.5), #78B400), center no-repeat url(../img/content/2.webp); }
 
-.webp .page-footer{ background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url(../img/content/2.webp) 0 50% no-repeat; }
+.webp .page-footer{ background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url(../img/content/2.webp) 0 50% no-repeat; background-size: cover; }
 
-.webp .page-footer{ background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50% no-repeat; }
+.webp .page-footer{ background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50% no-repeat; background-size: cover; }
 
-.webp .page-footer{ background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50% no-repeat; }
+.webp .page-footer{ background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/content/2.webp) 0 50% no-repeat; background-size: cover; }
 
 @media (any-hover: hover){
 
