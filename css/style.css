@@ -500,10 +500,6 @@ body::after {
   transition: background 0.3s ease-in-out;
 }
 
-.header__logo:hover.header__logo::before {
-  background: url("../img/logo/Smart_Energy_Group-Logo-lamp-yelow.svg") 0 2px no-repeat;
-}
-
 .menu {
   display: -ms-grid;
   display: grid;
@@ -573,17 +569,6 @@ body::after {
 
 .menu__item {
   padding: 0.3125rem 0;
-}
-
-.menu__item:hover .menu__link::before,
-.menu__item:active .menu__link::before {
-  content: "";
-  position: absolute;
-  background-color: #78B400;
-  top: 140%;
-  left: 0;
-  height: 0.125rem;
-  width: 100%;
 }
 
 .menu__item.parent {
@@ -666,15 +651,6 @@ body::after {
   left: -15px;
 }
 
-.menu__tel:hover {
-  color: #073f1e;
-}
-
-.menu__tel:hover::before {
-  -webkit-animation: wobble-hor-bottom 0.8s both;
-          animation: wobble-hor-bottom 0.8s both;
-}
-
 .menu__mail {
   text-transform: lowercase;
   position: relative;
@@ -694,15 +670,6 @@ body::after {
           transform: scale(1.5);
   top: 6px;
   left: -20px;
-}
-
-.menu__mail:hover {
-  color: #073f1e;
-}
-
-.menu__mail:hover::before {
-  -webkit-animation: wobble-hor-bottom 0.8s both;
-          animation: wobble-hor-bottom 0.8s both;
 }
 
 .sub-menu__item {
@@ -1433,7 +1400,6 @@ body::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 3.125rem;
     gap: 2.5rem;
     position: absolute;
     top: 160%;
@@ -1506,10 +1472,6 @@ body::after {
     background-position: 0 0;
     height: 3.75rem;
     width: 2.1875rem;
-  }
-
-  .header__logo:hover.header__logo::before {
-    background-position: 0 0;
   }
 
   .menu {
@@ -1653,6 +1615,12 @@ body::after {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 818px) and (any-hover: hover) {
+  .header__logo:hover.header__logo::before {
+    background-position: 0 0;
   }
 }
 
@@ -2312,7 +2280,7 @@ body::after {
 
   .table-haracter tr:hover td:first-child {
     background-color: yellow;
-    color: black;
+    color: rgba(7, 63, 30, 0.8);
   }
 
   .button:hover {
@@ -2322,6 +2290,10 @@ body::after {
             box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.1), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
   }
 
+  .header__logo:hover.header__logo::before {
+    background: url("../img/logo/Smart_Energy_Group-Logo-lamp-yelow.svg") 0 2px no-repeat;
+  }
+
   .menu__button:hover {
     background: yellow;
     color: #073f1e;
@@ -2329,16 +2301,50 @@ body::after {
             box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.1), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .menu__item.parent:hover .sub-menu {
+  .menu__item:hover .menu__link::before,
+  .menu__item:active .menu__link::before {
+    content: "";
+    position: absolute;
+    background-color: #78B400;
+    top: 140%;
+    left: 0;
+    height: 0.125rem;
+    width: 100%;
+  }
+
+  .menu__item.parent:hover .sub-menu,
+  .menu__item.parent:active .sub-menu {
     opacity: 1;
     visibility: visible;
-    top: 45px;
+    top: 40px;
   }
 
   .menu__item.parent:hover::after {
     -webkit-transform: rotate(180deg) scale(1.2);
         -ms-transform: rotate(180deg) scale(1.2);
             transform: rotate(180deg) scale(1.2);
+  }
+
+  .menu__tel:hover {
+    color: #073f1e;
+  }
+
+  .menu__tel:hover::before {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+            animation: wobble-hor-bottom 0.8s both;
+  }
+
+  .menu__mail:hover {
+    color: #073f1e;
+  }
+
+  .menu__mail:hover::before {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+            animation: wobble-hor-bottom 0.8s both;
+  }
+
+  .menu-item__link:hover {
+    font-weight: 500;
   }
 
   .header-page__one:hover,

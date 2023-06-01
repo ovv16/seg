@@ -726,5 +726,4 @@
     menuInit();
     tabs();
     formSubmit();
-    flsScroll.headerScroll();
 })();
