@@ -2829,6 +2829,15 @@ PERFORMANCE OF THIS SOFTWARE.
             var name = document.getElementById("name").value;
             var phone = document.getElementById("phone").value;
             var message = document.getElementById("message").value;
+            if (name.trim() === "" || phone.trim() === "") {
+                alert("Будь ласка, заповніть усі обов'язкові поля");
+                return;
+            }
+            var phonePattern = /^\+?[0-9]+$/;
+            if (!phone.match(phonePattern)) {
+                alert("Будь ласка, введіть правильний номер телефону");
+                return;
+            }
             var text = "Ім'я: " + name + "\nТелефон: " + phone + "\nТекст: " + message;
             var request = new XMLHttpRequest;
             request.open("GET", "https://api.telegram.org/bot6266442036:AAHNvas7s8jSaMfaeHQyyb8wmwCDfvwH0Hs/sendMessage?chat_id=164306473&text=" + encodeURIComponent(text));
