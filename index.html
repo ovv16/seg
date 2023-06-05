@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230601195703">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230605124635">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
 					<div class="popup__text">
 						Замовити дзвінок
 					</div>
-					<form data-dev data-popup-message="#popup-message" action="files/sendmail/sendmail.php" method="POST" class="popup__form form-popup">
+					<form data-ajax data-popup-message="#popup-message" action="files/sendmail/sendmail.php" method="POST" class="popup__form form-popup">
 						<input type="text" name="name" data-error="Error" placeholder="Ім'я" class="form-popup__name">
 						<input type="tel" name="phone" data-error="Error" placeholder="Телефон" class="form-popup__tel">
 						<button type="submit" class="form-popup__submit">Відправити</button>
@@ -36,6 +36,22 @@
 					<div class="popup__text-back">
 						Дякуємо! Незабаром з Вами зв'яжемось.
 					</div>
+				</div>
+			</div>
+		</div>,
+		<div id="popup_order" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">×</button>
+					<div class="popup__text">
+						Замовити дзвінок
+					</div>
+					<form data-ajax data-popup-message="#popup-message" action="files/sendmail/sendmail.php" method="POST" class="popup__form form-popup">
+						<input type="text" name="name" data-error="Error" placeholder="Ім'я" class="form-popup__name">
+						<input type="tel" name="phone" data-error="Error" placeholder="Телефон" class="form-popup__tel">
+						<textarea name="textarea" id="textarea" cols="10" rows="1" class="form-popup__textarea" placeholder="Повідомлення"></textarea>
+						<button type="submit" class="form-popup__submit">Відправити</button>
+					</form>
 				</div>
 			</div>
 		</div>,
@@ -79,7 +95,7 @@
 										</a>
 										<ul class="menu-item__list">
 											<li class="menu-item__item">
-												<a href="" class="menu-item__link">
+												<a href="lichilnuku.html#100g1b" class="menu-item__link">
 													GAMA 100 G1B
 												</a>
 											</li>
@@ -205,10 +221,10 @@
 			</section>
 			<section class="page__about about">
 				<div class="about__container">
+					<h1 class="about__titel">
+						Про компанію
+					</h1>
 					<div class="about__block">
-						<h1 class="about__titel">
-							Про компанію
-						</h1>
 						<div class="about__text">
 							<p>
 								ТОВ "Smart Energy Group" - це компанія, яка була заснована в 2017 році і з успіхом займається реалізацією електролічильників GAMA виробництва Elgama-Elektronika та контролерів виробництва Navitus LT. Ми є офіційним дистриб'ютором цих компаній на території України.
@@ -223,14 +239,14 @@
 								Замовлення продукції від "Smart Energy Group" - це крок до ефективного управління енергоресурсами, зниження витрат та захисту навколишнього середовища. Довіртеся нашому досвіду та професіоналізму і переконайтесь в якості наших продуктів!
 							</p>
 						</div>
-					</div>
-					<div data-gallery class="about__gallery gallery">
-						<a href="img/content/sert/sert.jpg" class="gallery__image">
-							<picture><source srcset="img/content/sert/sert.webp" type="image/webp"><img src="img/content/sert/sert.jpg" class="gallery__preview" alt="Сертифікат Elgama-Elektronika" /></picture>
-						</a>
-						<a href="img/content/sert/sert.jpg" class="gallery__image">
-							<picture><source srcset="img/content/sert/sert.webp" type="image/webp"><img src="img/content/sert/sert.jpg" class="gallery__preview" alt="Сертифікат Navitus LT" /></picture>
-						</a>
+						<div data-gallery class="about__gallery gallery">
+							<a href="img/content/sert/sert.jpg" class="gallery__image">
+								<picture><source srcset="img/content/sert/sert.webp" type="image/webp"><img src="img/content/sert/sert.jpg" class="gallery__preview" alt="Сертифікат Elgama-Elektronika" /></picture>
+							</a>
+							<a href="img/content/sert/sert.jpg" class="gallery__image">
+								<picture><source srcset="img/content/sert/sert.webp" type="image/webp"><img src="img/content/sert/sert.jpg" class="gallery__preview" alt="Сертифікат Navitus LT" /></picture>
+							</a>
+						</div>
 					</div>
 			</section>
 			<section class="page__footer page-footer">
@@ -241,7 +257,7 @@
 					<p class="page-footer__text">
 						Зробіть правильний вибір і<br> замовлюйте зараз.
 					</p>
-					<button type="button" class="page-footer__button">
+					<button href="#popup_order" data-popup="#popup_order" type="button" class="page-footer__button">
 						Оформити замовлення
 					</button>
 				</div>
@@ -287,7 +303,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230601195703"></script>
+	<script src="js/app.min.js?_v=20230605124635"></script>
 </body>
 
 </html>
