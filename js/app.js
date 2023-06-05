@@ -2824,6 +2824,19 @@ PERFORMANCE OF THIS SOFTWARE.
                 });
             }));
         }
+        document.getElementById("telegram-form").addEventListener("submit", (function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+            var text = "Ім'я: " + name + "\nТелефон: " + phone + "\nТекст: " + message;
+            var request = new XMLHttpRequest;
+            request.open("GET", "https://api.telegram.org/bot6266442036:AAHNvas7s8jSaMfaeHQyyb8wmwCDfvwH0Hs/sendMessage?chat_id=164306473&text=" + encodeURIComponent(text));
+            request.send();
+            document.getElementById("name").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("message").value = "";
+        }));
         window["FLS"] = true;
         isWebp();
         addTouchClass();

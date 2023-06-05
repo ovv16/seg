@@ -6,9 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230605150039">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230605173152">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20230605150039"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -22,9 +21,10 @@
 					<div class="popup__text">
 						Замовити дзвінок
 					</div>
-					<form data-ajax data-popup-message="#popup-message" action="files/sendmail/sendmail.php" method="POST" class="popup__form form-popup">
-						<input type="text" name="name" data-error="Error" placeholder="Ім'я" class="form-popup__name">
-						<input type="tel" name="phone" data-error="Error" placeholder="Телефон" class="form-popup__tel">
+					<form id="telegram-form" class="popup__form form-popup" data-dev data-popup-message="#popup-message">
+						<input type="text" id="name" placeholder="Ім'я" class="form-popup__name" required>
+						<input type="tel" id="phone" placeholder="Телефон" class="form-popup__tel" required>
+						<textarea id="message" placeholder="Повідомлення" cols="10" rows="1" class="form-popup__textarea"></textarea>
 						<button type="submit" class="form-popup__submit">Відправити</button>
 					</form>
 				</div>
@@ -47,20 +47,12 @@
 					<div class="popup__text">
 						Замовити дзвінок
 					</div>
-					<div class="form">
-						<form data-popup-message="#popup-message" action="" onsubmit=" return sender()" class="popup__form form-popup">
-							<input type="text" name="name" id="name" data-error="Error" placeholder="Ім'я" class="form-popup__name" required>
-							<input type="tel" name="phone" data-error="Error" placeholder="Телефон" class="form-popup__tel" required>
-							<textarea name="message" id="message" cols="10" rows="1" class="form-popup__textarea" placeholder="Повідомлення"></textarea>
-							<input type="submit" class="form-popup__submit" value="Відправити" id="btn">
-						</form>
-					</div>
-					<!-- <form data-ajax data-popup-message="#popup-message" action="files/sendmail/sendmail.php" method="POST" class="popup__form form-popup">
-				<input type="text" name="name" data-error="Error" placeholder="Ім'я" class="form-popup__name">
-				<input type="tel" name="phone" data-error="Error" placeholder="Телефон" class="form-popup__tel">
-				<textarea name="textarea" id="textarea" cols="10" rows="1" class="form-popup__textarea" placeholder="Повідомлення"></textarea>
-				<button type="submit" class="form-popup__submit">Відправити</button>
-			</form> -->
+					<form id="telegram-form" class="popup__form form-popup" data-dev data-popup-message="#popup-message">
+						<input type="text" id="name" placeholder="Ім'я" class="form-popup__name" required>
+						<input type="tel" id="phone" placeholder="Телефон" class="form-popup__tel" required>
+						<textarea id="message" placeholder="Повідомлення" cols="10" rows="1" class="form-popup__textarea"></textarea>
+						<button type="submit" class="form-popup__submit">Відправити</button>
+					</form>
 				</div>
 			</div>
 		</div>,
@@ -266,7 +258,7 @@
 					<p class="page-footer__text">
 						Зробіть правильний вибір і<br> замовлюйте зараз.
 					</p>
-					<button href="#popup_order" data-popup="#popup_order" type="button" class="page-footer__button">
+					<button href="#popup" data-popup="#popup" type="button" class="page-footer__button">
 						Оформити замовлення
 					</button>
 				</div>
@@ -312,7 +304,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230605150039"></script>
+	<script src="js/app.min.js?_v=20230605173152"></script>
 </body>
 
 </html>

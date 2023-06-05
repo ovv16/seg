@@ -231,6 +231,10 @@ body::after {
   transition: all 0.3s ease-in-out;
 }
 
+.popup__close:focus-visible {
+  outline: none;
+}
+
 .popup__text {
   font-size: 1.5rem;
   line-height: 1.6;
