@@ -2833,18 +2833,31 @@ PERFORMANCE OF THIS SOFTWARE.
                 alert("Будь ласка, заповніть усі обов'язкові поля");
                 return;
             }
-            var phonePattern = /^\+?[0-9]+$/;
-            if (!phone.match(phonePattern)) {
-                alert("Будь ласка, введіть правильний номер телефону");
-                return;
-            }
             var text = "Ім'я: " + name + "\nТелефон: " + phone + "\nТекст: " + message;
             var request = new XMLHttpRequest;
-            request.open("GET", "https://api.telegram.org/bot6266442036:AAHNvas7s8jSaMfaeHQyyb8wmwCDfvwH0Hs/sendMessage?chat_id=164306473&text=" + encodeURIComponent(text));
+            request.open("GET", "https://api.telegram.org/bot6266442036:AAHNvas7s8jSaMfaeHQyyb8wmwCDfvwH0Hs/sendMessage?chat_id=-918646509&text=" + encodeURIComponent(text));
             request.send();
-            document.getElementById("name").value = "";
-            document.getElementById("phone").value = "";
-            document.getElementById("message").value = "";
+            request.onload = function() {
+                if (request.status === 200) {
+                    document.getElementById("name").value = "";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("message").value = "";
+                    var popup = document.getElementById("popup");
+                    popup.classList.remove("popup_show");
+                    var popupMessage = document.getElementById("popup-message");
+                    popupMessage.classList.add("popup_show");
+                    popupMessage = document.getElementById("popup-message");
+                    var popupClose = popupMessage.querySelector(".popup__close");
+                    var popupWrapper = popupMessage.querySelector(".popup__wrapper");
+                    function closePopupMessage() {
+                        popupMessage.classList.remove("popup_show");
+                    }
+                    popupClose.addEventListener("click", closePopupMessage);
+                    popupWrapper.addEventListener("click", (function(event) {
+                        if (event.target === popupWrapper) closePopupMessage();
+                    }));
+                }
+            };
         }));
         window["FLS"] = true;
         isWebp();
