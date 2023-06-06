@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Smart Energy Group</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230606161433">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">×</button>
+					<div class="popup__text">
+						Замовити дзвінок
+					</div>
+					<form id="telegram-form" class="popup__form form-popup">
+						<input type="text" id="name" placeholder="Ім'я" class="form-popup__name" required>
+						<input type="tel" id="phone" placeholder="Телефон" class="form-popup__tel" required>
+						<textarea id="message" placeholder="Повідомлення" cols="10" rows="1" class="form-popup__textarea"></textarea>
+						<button type="submit" class="form-popup__submit">Відправити</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="popup-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">×</button>
+					<div class="popup__text-back">
+						Дякуємо! Незабаром з Вами зв'яжемось.
+					</div>
+				</div>
+			</div>
+		</div>,
+		<header data-lp class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo">
+					<span style="color:#78B400">Smart</span>
+					<span style="color:#78B400">Energy</span>
+					<span>Group</span>
+				</a>
+				<div class="header__menu menu">
+					<div class="menu__contacts">
+						<a href="tel:+380967742000" class="menu__tel">+38 (096) 774-20-00</a>
+						<a href="mailto:smartenerdzi@gmail.com" class="menu__mail">smartenerdzi@gmail.com</a>
+					</div>
+					<div class="menu__contacts-icons contacts-icons">
+						<a href="tel:+380967742020" class="contacts-icons__tel">
+						</a>
+						<a href="mailto:smartenerdzi@gmail.com" class="contacts-icons__mail">
+						</a>
+					</div>
+					<button href="#popup" data-popup="#popup" class="menu__button">
+						Замовоти дзвінок
+					</button>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="index.html" class="menu__link">
+									про компанію
+								</a>
+							</li>
+							<li class="menu__item parent">
+								<a href="#" class="menu__link">
+									Продукція
+								</a>
+								<ul class="menu__sub-menu sub-menu">
+									<li class="sub-menu__item menu-item">
+										<a href="lichilnuku.html" class="sub-menu__link">
+											Лічильники
+										</a>
+										<ul class="menu-item__list">
+											<li class="menu-item__item">
+												<a href="100g1b.html" class="menu-item__link">
+													GAMA 100 G1B
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="100g1y.html" class="menu-item__link">
+													GAMA 100 G1Y
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="300g3b.html" class="menu-item__link">
+													GAMA 300 G3B
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="300g3y.html" class="menu-item__link">
+													GAMA 300 G3Y
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="epqs.html" class="menu-item__link">
+													EPQS
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="sub-menu__item">
+										<a href="#" class="sub-menu__link">
+											Контролери
+										</a>
+										<ul class="menu-item__list">
+											<li class="menu-item__item">
+												<a href="#" class="menu-item__link">
+													MCL 4.5
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="#" class="menu-item__link">
+													MCL 5.10
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">
+									Документація
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="contacts.html" class="menu__link">
+									Контакти
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="product">
+				<div class="product__container">
+					<div class="product__header">
+						<div class="product__image" id="300g3b">
+							<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="Лічильник GAMA 300g3b"></picture>
+						</div>
+						<div class="product__opus">
+							<h2 class="product__titel">
+								Лічильники GAMA 300 G3B
+							</h2>
+							<p class="product__text">
+								Електролічильники серії GAMA 300 G3B, виготовлені ELGAMA-ELEKTRONIKA, призначені для вимірювання, зберігання та обробки інформації про використання як активної, так і реактивної (або лише активної) електричної енергії в мережах змінного струму з трьома або чотирьома проводами. Лічильники можуть бути прямого або трансформаторного включення, підключені до трансформаторів струму та/або напруги, залежно від їх модифікації.
+							</p>
+							<p class="product__text">
+								Лічильник серії GAMA 300 G3B також може вимірювати миттєві значення потужності, створювати профілі потужності та заповнювати журнал подій. Лічильник може працювати як з одним тарифом, так і з кількома тарифами. Зовнішні або внутрішні годинники можуть змінювати тарифи.
+							</p>
+							<p class="product__text">
+								Лічильник обладнаний пристроями оптичної та електричної передачі даних (RS485). Серія електролічильників GAMA 300 G3B добре підходить для автоматизованих систем обліку електроенергії.
+							</p>
+							<button class="product__button button" href="#popup" data-popup="#popup">
+								Замовити
+							</button>
+						</div>
+					</div>
+					<div class="product__detail">
+						<div data-tabs class="product_tabs tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">Опис</button>
+								<button type="button" class="tabs__title">Технічні характеристи</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<table class="tabs__table table-opus">
+										<thead class="table__header">
+											<tr>
+												<th>Модель</th>
+												<th>Номінальна напруга</th>
+												<th>Номінальний струм</th>
+												<th>Інтерфейс</th>
+												<th>Клас точності</th>
+												<th>Ціна, грн.</th>
+											</tr>
+										</thead>
+										<tbody class="table__body">
+											<tr class="table__row">
+												<td>
+													<p>GAMA 300 G3B 144.230.F17.B2.P4.C311.A3.L1</p>
+												</td>
+												<td>
+													<p>3х220/380В</p>
+												</td>
+												<td>
+													<p>5(100) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>1,0</p>
+												</td>
+												<td>
+													<p>5406,00</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>GAMA 300 G3B 147.240.F17.B2.P4.C311.A3.L1</p>
+												</td>
+												<td>
+													<p>3x57,7/100...230/400В</p>
+												</td>
+												<td>
+													<p>5(10) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>1,0</p>
+												</td>
+												<td>
+													<p>5406,00</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>GAMA300 G3B 144.230.F27.B2.P4.C311.A3.L1</p>
+												</td>
+												<td>
+													<p>3х220/380В</p>
+												</td>
+												<td>
+													<p>5(100) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>1,0</p>
+												</td>
+												<td>
+													<p>5406,00</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>GAMA 300 G3B 144.230.F47.B2.P4.C311.A3.L1</p>
+												</td>
+												<td>
+													<p>3х220/380В</p>
+												</td>
+												<td>
+													<p>5(100) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>1,0</p>
+												</td>
+												<td>
+													<p>7332,00</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>GAMA 300 G3B 147.240.F47.B2.P4.C311.A3.L1</p>
+												</td>
+												<td>
+													<p>3x57,7/100...230/400В</p>
+												</td>
+												<td>
+													<p>5(10) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>1,0</p>
+												</td>
+												<td>
+													<p>7332,00</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>GAMA 300 G3B 144.230.F67.B2.P4.C330.A3.L1.М1</p>
+												</td>
+												<td>
+													<p>3х220/380В</p>
+												</td>
+												<td>
+													<p>5(100) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>1,0</p>
+												</td>
+												<td>
+													<p>7872,00</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>GAMA 300 G3B 147.240.F67.B2.P4.C330.A3.L1.М1</p>
+												</td>
+												<td>
+													<p>3x57,7/100...230/400В</p>
+												</td>
+												<td>
+													<p>5(10) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>1,0</p>
+												</td>
+												<td>
+													<p>7872,00</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>GAMA 300 G3B 547.240.F77.B2.P4.C371.A3.L1.M1</p>
+												</td>
+												<td>
+													<p>3x57,7/100...230/400В</p>
+												</td>
+												<td>
+													<p>5(10) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>0,5S</p>
+												</td>
+												<td>
+													<p>11934,00</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs__body">
+									<table class="tabs__table table-haracter">
+										<tbody>
+											<tr class="table__row">
+												<td>
+													<p>Клас точності</p>
+												</td>
+												<td>
+													<p>вимірювання активної енергії (прямого включення): 1.0 або 2.0</p>
+													<p>Вимірювання активної енергії (трансформаторного включення): 0.5s або 1.0</p>
+													<p>Вимірювання реактивної енергії: 1.0 або 2.0</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Номінальна напруга</p>
+												</td>
+												<td>
+													<p>3x57,7/100...230/400В</p>
+													<p>3х220/380В</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Допустимі відхилення напруги,% від Uн</td>
+												<td>
+													<p>-20... +15</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Номінальний струм</p>
+												</td>
+												<td>
+													<p>5(10) А або 5 (100) А</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Номінальна частота</p>
+												</td>
+												<td>
+													<p>50 Гц або 60 Гц</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Споживана потужність, ВА</td>
+												<td>
+													<p>в ланцюгах напруги:</p>
+													<p>≤1.0 В·А (VА) (≤0.5 Вт (W))</p>
+													≤2.3 В · А (VА) (≤0.8 Вт (W)) (з додатковим пристроєм електричного зв'язку)≤10 В · А (VА) (≤1.5 Вт (W))
+													(з внутрішнім PLC модемом)в струмових ланцюгах:&lt;0,5 В · А (VА) (трансформаторного включення)&lt;0,05
+													В · А (VА) (прямого включення)
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Постійна лічильника, імп / кВт · год, імп / квар · год</td>
+												<td>50…150000 (прямого включення)50…150000 (трансформаторного включення)</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Функції тарифного модуля</p>
+													&nbsp;
+												</td>
+												<td>кількість тарифів енергії: програмується (1 … 4)
+													<p>"Аварійний" тариф: програмується</p>
+													<p>число тарифів для максимумів потужності: програмується (1 … 4)</p>
+													<p>тривалість збереження даних при відключенні напруги: &gt;20 років</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Внутрішній годинник (ДСТУ EN 62054-21)</p>
+												</td>
+												<td>
+													<p>похибка: &lt; 0,5 с(s)/24 г(h) (T=23°C), &nbsp;&lt; 0,15 с(s)/°C/24 г(h)</p>
+													резервне джерело живлення годин: Li-ion батарея і / або іоністор
+													<p>тривалість роботи при використанні тільки Li-ion батареї: &gt; 10 років</p>
+													<p>тривалість роботи при використанні тільки іоністора: &lt; 14 днів</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Пристрої зв'язку</td>
+												<td>Оптичний пристрій зв'язку: IEC 62056-21, DLMSCS (20mA струмова петля): IEC 62056-21 або DLMSRS485,
+													RS232: IEC 62056-21 або DLMSM-Bus: EN 13757-2, EN 13757-3PLC: EN 50065-1</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Ізоляція</p>
+												</td>
+												<td>Випробування імпульсною напругою (МЭК 60060-1): 6 кВВипробування змінним напругою: 4 кВ</td>
+											</tr>
+											<tr class="table__row">
+												<td>Робочий діапазон температур</td>
+												<td>
+													<p>-40°С…+70°С</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Термін служби</p>
+												</td>
+												<td>
+													<p>20 років і більше</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Маса, кг</td>
+												<td>
+													<p>&lt; 1,4</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Розміри, мм</p>
+												</td>
+												<td>
+													<p>260 x 175 x 80</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__footer page-footer">
+				<div class="page-footer__container">
+					<h3 class="page-footer__titel">
+						Розмістити замовлення
+					</h3>
+					<p class="page-footer__text">
+						Зробіть правильний вибір і<br> замовлюйте зараз.
+					</p>
+					<button href="#popup" data-popup="#popup" class="page-footer__button">
+						Оформити замовлення
+					</button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top top-footer">
+					<a href="home.html" class="top-footer__logo">
+						<img src="img/logo/Smart-Energy_Group-Logo-white.svg" alt=" Logo Smart Energy Group" width="100px">
+					</a>
+					<div class="top-footer__grafwork grafwork">
+						<div class="top-footer__titel">
+							Графік роботи
+						</div>
+						<p class="grafwork__text">
+							ПН-ПТ: 09:00 - 18:00<br> СБ-НД: Вихідні
+						</p>
+					</div>
+					<div class="top-footer__address address">
+						<div class="top-footer__titel">
+							Адреса
+						</div>
+						<address class="address__text">
+							вул. Декабристів, 3, оф. 513 <br>
+							Київ, 02121
+						</address>
+					</div>
+					<div class="top-footer__contacts">
+						<div class="top-footer__titel">
+							Контакти
+						</div>
+						<a href="tel:+380967742000" class="top-footer__tel">+38 (096) 774-20-00</a>
+						<a href="mailto:smartenerdzi@gmail.com" class="top-footer__mail">smartenerdzi@gmail.com</a>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<div class="bottom-footer__copy">
+						© 2017-2023. Всі права захищені. Smart Energy Group
+					</div>
+					<a href="#" class="bottom-footer__father">Створено <img src="img/logo/logo_ovv.svg" alt="logo_ovv"></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230606161433"></script>
+</body>
+
+</html>

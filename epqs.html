@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Smart Energy Group</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230606161433">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">×</button>
+					<div class="popup__text">
+						Замовити дзвінок
+					</div>
+					<form id="telegram-form" class="popup__form form-popup">
+						<input type="text" id="name" placeholder="Ім'я" class="form-popup__name" required>
+						<input type="tel" id="phone" placeholder="Телефон" class="form-popup__tel" required>
+						<textarea id="message" placeholder="Повідомлення" cols="10" rows="1" class="form-popup__textarea"></textarea>
+						<button type="submit" class="form-popup__submit">Відправити</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="popup-message" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">×</button>
+					<div class="popup__text-back">
+						Дякуємо! Незабаром з Вами зв'яжемось.
+					</div>
+				</div>
+			</div>
+		</div>,
+		<header data-lp class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo">
+					<span style="color:#78B400">Smart</span>
+					<span style="color:#78B400">Energy</span>
+					<span>Group</span>
+				</a>
+				<div class="header__menu menu">
+					<div class="menu__contacts">
+						<a href="tel:+380967742000" class="menu__tel">+38 (096) 774-20-00</a>
+						<a href="mailto:smartenerdzi@gmail.com" class="menu__mail">smartenerdzi@gmail.com</a>
+					</div>
+					<div class="menu__contacts-icons contacts-icons">
+						<a href="tel:+380967742020" class="contacts-icons__tel">
+						</a>
+						<a href="mailto:smartenerdzi@gmail.com" class="contacts-icons__mail">
+						</a>
+					</div>
+					<button href="#popup" data-popup="#popup" class="menu__button">
+						Замовоти дзвінок
+					</button>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="index.html" class="menu__link">
+									про компанію
+								</a>
+							</li>
+							<li class="menu__item parent">
+								<a href="#" class="menu__link">
+									Продукція
+								</a>
+								<ul class="menu__sub-menu sub-menu">
+									<li class="sub-menu__item menu-item">
+										<a href="lichilnuku.html" class="sub-menu__link">
+											Лічильники
+										</a>
+										<ul class="menu-item__list">
+											<li class="menu-item__item">
+												<a href="100g1b.html" class="menu-item__link">
+													GAMA 100 G1B
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="100g1y.html" class="menu-item__link">
+													GAMA 100 G1Y
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="300g3b.html" class="menu-item__link">
+													GAMA 300 G3B
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="300g3y.html" class="menu-item__link">
+													GAMA 300 G3Y
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="epqs.html" class="menu-item__link">
+													EPQS
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="sub-menu__item">
+										<a href="#" class="sub-menu__link">
+											Контролери
+										</a>
+										<ul class="menu-item__list">
+											<li class="menu-item__item">
+												<a href="#" class="menu-item__link">
+													MCL 4.5
+												</a>
+											</li>
+											<li class="menu-item__item">
+												<a href="#" class="menu-item__link">
+													MCL 5.10
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">
+									Документація
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="contacts.html" class="menu__link">
+									Контакти
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="product">
+				<div class="product__container">
+					<div class="product__header">
+						<div class="product__image" id="epqs">
+							<picture><source srcset="img/content/lichilnuku/epqs2.webp" type="image/webp"><img src="img/content/lichilnuku/epqs2.webp" alt="Лічильник EPQS"></picture>
+						</div>
+						<div class="product__opus">
+							<h2 class="product__titel">
+								Електролічильник EPQS
+							</h2>
+							<p class="product__text">
+								Електролічильник EPQS, розроблений ELGAMA-ELEKTRONIKA, призначений для вимірювання, запису та накопичення даних про активну енергію обох напрямків (+A, -A), реактивну енергію в чотирьох квадрантах (R1, R2, R3, R4) і повну енергію обох напрямків (+W, -W). Електролічильник EPQS також може реєструвати максимальну усереднену потужність, накопичувати профілі навантаження та реєструвати кумулятивне навантаження.
+							</p>
+							<p class="product__text">
+								Лічильник має вісімнадцять вільно програмованих каналів, які можна використовувати для формування профілів певних величин. Цей алгоритм формування використовується в лічильнику. Лічильник EPQS може робити аналіз якості енергії та генерувати тижневі звіти. Для обліку з кількома тарифами можна використовувати до восьми тарифів енергії та стільки ж тарифів максимальної потужності. Структура тарифного модуля дозволяє ввести в лічильник майже будь-яку тарифну програму, яка зараз існує. Електролічильник EPQS може бути використаний в автоматизованих системах обліку електроенергії, оскільки він має два незалежні інтерфейси електричного зв’язку (RS485).
+							</p>
+							<button class="product__button button" href="#popup" data-popup="#popup">
+								Замовити
+							</button>
+						</div>
+					</div>
+					<div class="product__detail">
+						<div data-tabs class="product_tabs tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">Опис</button>
+								<button type="button" class="tabs__title">Технічні характеристи</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<table class="tabs__table table-opus">
+										<thead class="table__header">
+											<tr>
+												<th>Модель</th>
+												<th>Номінальна напруга</th>
+												<th>Номінальний струм</th>
+												<th>Інтерфейс</th>
+												<th>Клас точності</th>
+												<th>Ціна, грн.</th>
+											</tr>
+										</thead>
+										<tbody class="table__body">
+											<tr class="table__row">
+												<td>
+													<p>EPQS</p>
+												</td>
+												<td>
+													<p>3x57,7/100...230/400В</p>
+												</td>
+												<td>
+													<p>5(10) А</p>
+												</td>
+												<td>
+													<p>RS485</p>
+												</td>
+												<td>
+													<p>0,5S</p>
+												</td>
+												<td>
+													<p>12162,00</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs__body">
+									<table class="tabs__table table-haracter">
+										<tbody>
+											<tr class="table__row">
+												<td>
+													<p>Клас точності</p>
+												</td>
+												<td>
+													<p>0,5S</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Номінальна напруга</p>
+												</td>
+												<td>
+													<p>3x57,7/100...230/400В</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Номінальний струм</p>
+												</td>
+												<td>
+													<p>5(10) А</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Поріг чутливості,% Iном</p>
+												</td>
+												<td>
+													<p>0,1</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Номінальна частота</p>
+												</td>
+												<td>
+													<p>50 Гц або 60 Гц</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Споживана потужність, ВА</td>
+												<td>
+													<p>в ланцюгах напруги: £ 3 ВА</p>
+													в струмових ланцюгах: £ 0,5 ВА на фазу
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Постійна лічильника, імп / кВт · год, імп / квар · год</td>
+												<td>не більше 130000</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Внутрішній годинник</p>
+												</td>
+												<td>
+													<p>похибка: 0,5 с/24 год (Т=23 ° С)</p>
+													<p>додаткова температурна похибка: 0,15 с/°С/24 год</p>
+													резервне джерело живлення годин: 3,6 В батарея
+													<p>Ресурс батареї: &gt; 8 років</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Цифрові інтерфейси зв'язку</td>
+												<td>
+													<p>оптичний інтерфейс зв'язку: протокол IEC 62056-21</p>
+													електричний інтерфейс (20 мА струмова петля, RS485, RS232): протокол IEC 62056-31
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Ізоляція</p>
+												</td>
+												<td>Випробування імпульсною напругою: 6 кВВипробування змінним напругою: 4 кВ</td>
+											</tr>
+											<tr class="table__row">
+												<td>Робочий діапазон температур</td>
+												<td>
+													<p>-25°С…+60°С</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>Маса, кг</td>
+												<td>
+													<p>не більше 1,5</p>
+												</td>
+											</tr>
+											<tr class="table__row">
+												<td>
+													<p>Розміри, мм</p>
+												</td>
+												<td>
+													<p>325 х 177 х 55</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__footer page-footer">
+				<div class="page-footer__container">
+					<h3 class="page-footer__titel">
+						Розмістити замовлення
+					</h3>
+					<p class="page-footer__text">
+						Зробіть правильний вибір і<br> замовлюйте зараз.
+					</p>
+					<button href="#popup" data-popup="#popup" class="page-footer__button">
+						Оформити замовлення
+					</button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top top-footer">
+					<a href="home.html" class="top-footer__logo">
+						<img src="img/logo/Smart-Energy_Group-Logo-white.svg" alt=" Logo Smart Energy Group" width="100px">
+					</a>
+					<div class="top-footer__grafwork grafwork">
+						<div class="top-footer__titel">
+							Графік роботи
+						</div>
+						<p class="grafwork__text">
+							ПН-ПТ: 09:00 - 18:00<br> СБ-НД: Вихідні
+						</p>
+					</div>
+					<div class="top-footer__address address">
+						<div class="top-footer__titel">
+							Адреса
+						</div>
+						<address class="address__text">
+							вул. Декабристів, 3, оф. 513 <br>
+							Київ, 02121
+						</address>
+					</div>
+					<div class="top-footer__contacts">
+						<div class="top-footer__titel">
+							Контакти
+						</div>
+						<a href="tel:+380967742000" class="top-footer__tel">+38 (096) 774-20-00</a>
+						<a href="mailto:smartenerdzi@gmail.com" class="top-footer__mail">smartenerdzi@gmail.com</a>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<div class="bottom-footer__copy">
+						© 2017-2023. Всі права захищені. Smart Energy Group
+					</div>
+					<a href="#" class="bottom-footer__father">Створено <img src="img/logo/logo_ovv.svg" alt="logo_ovv"></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230606161433"></script>
+</body>
+
+</html>
