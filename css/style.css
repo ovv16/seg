@@ -579,37 +579,11 @@ body::after {
 .menu__item.parent {
   position: relative;
   min-width: 105px;
-}
-
-.menu__item.parent::after {
-  content: "";
-  position: absolute;
-  background: url("../img/design/arrow.svg") no-repeat;
-  top: 40%;
-  left: 85%;
-  height: 0.3125rem;
-  width: 0.5rem;
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  text-align: left;
 }
 
 .menu__link {
   position: relative;
-}
-
-.menu__link::before {
-  content: "";
-  left: 50%;
-  width: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .menu__contacts {
@@ -675,6 +649,13 @@ body::after {
           transform: scale(1.5);
   top: 6px;
   left: -20px;
+}
+
+.menu-item__title {
+  font-size: 1rem;
+  font-weight: normal;
+  border-radius: 0.3125rem;
+  background-color: yellow;
 }
 
 .sub-menu__item {
@@ -2253,6 +2234,56 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (min-width: 51.125em) {
+  .menu__item {
+    text-align: center;
+  }
+
+  .menu__item.parent::after {
+    content: "";
+    position: absolute;
+    background: url("../img/design/arrow.svg") no-repeat;
+    top: 40%;
+    left: 85%;
+    height: 0.3125rem;
+    width: 0.5rem;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+
+  .menu__link::before {
+    content: "";
+    left: 50%;
+    width: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (min-width: 51.125em) and (any-hover: hover) {
+  .menu__item:hover .menu__link::before,
+  .menu__item:active .menu__link::before {
+    content: "";
+    position: absolute;
+    background-color: #78B400;
+    top: 140%;
+    left: 0;
+    height: 0.125rem;
+    width: 100%;
+  }
+
+  .menu__item:hover .menu__link {
+    color: #78B400;
+  }
+}
+
 @media (min-width: 121.875em) {
   .tabs__title {
     font-size: 1.125rem;
@@ -2600,9 +2631,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     color: #fff;
   }
 
@@ -3039,12 +3067,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 51.125em) {
-  .sub-menu__item {
-    text-align: left;
+  .menu__item.parent {
+    text-align: center;
+  }
+
+  .menu-item__title {
+    font-size: 0.875rem;
+    text-align: center;
   }
 
   .menu-item__link {
-    text-align: left;
     padding: 0;
   }
 }
@@ -3787,21 +3819,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.1), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .menu__item:hover .menu__link::before,
-  .menu__item:active .menu__link::before {
-    content: "";
-    position: absolute;
-    background-color: #78B400;
-    top: 140%;
-    left: 0;
-    height: 0.125rem;
-    width: 100%;
-  }
-
-  .menu__item:hover .menu__link {
-    color: #78B400;
-  }
-
   .menu__item.parent:hover .sub-menu,
   .menu__item.parent:active .sub-menu {
     opacity: 1;
@@ -3831,11 +3848,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .menu__mail:hover::before {
     -webkit-animation: wobble-hor-bottom 0.8s both;
             animation: wobble-hor-bottom 0.8s both;
-  }
-
-  .sub-menu__item:hover {
-    background-color: #073f1e;
-    color: #fff;
   }
 
   .menu-item__link:hover {
