@@ -426,6 +426,8 @@ body::after {
   top: 0;
   margin: 0 auto;
   z-index: 3;
+  -webkit-box-shadow: grey 1px 1px 5px;
+          box-shadow: grey 1px 1px 5px;
 }
 
 .header__container {
@@ -441,10 +443,6 @@ body::after {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.625rem;
-}
-
-.header_header-scroll {
-  opacity: 0.5;
 }
 
 .header__logo {
@@ -680,10 +678,18 @@ body::after {
 }
 
 .sub-menu__item {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #073f1e;
   min-width: 150px;
+  display: block;
+  width: 100%;
+  padding: 0.3125rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 0.3125rem;
 }
 
 .contacts-icons {
@@ -703,8 +709,19 @@ body::after {
 }
 
 .menu-item__item {
-  font-size: 0.875rem;
   font-weight: 300;
+  font-size: 1rem;
+}
+
+.menu-item__link {
+  display: block;
+  width: 100%;
+  padding: 0.3125rem 0.625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 0.3125rem;
 }
 
 .icon-menu {
@@ -1004,7 +1021,7 @@ body::after {
 }
 
 .header-page {
-  margin-top: 9.375rem;
+  margin-top: 8.6875rem;
 }
 
 .header-page__container {
@@ -1231,7 +1248,7 @@ body::after {
 }
 
 .lich {
-  margin-top: 9.375rem;
+  margin-top: 8.6875rem;
 }
 
 .header-lich {
@@ -1398,7 +1415,7 @@ body::after {
 }
 
 .product {
-  margin-top: 9.375rem;
+  margin-top: 11.25rem;
 }
 
 .product__container {
@@ -2451,11 +2468,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.25rem;
     position: absolute;
     top: 160%;
-    left: -100%;
-    padding: 40px;
+    left: -120%;
+    padding: 1.25rem;
     background-color: white;
     border-radius: 5px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.3607843137) 2px 5px 8px;
@@ -3021,13 +3038,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
+@media (max-width: 51.125em) {
+  .sub-menu__item {
+    text-align: left;
+  }
+
+  .menu-item__link {
+    text-align: left;
+    padding: 0;
+  }
+}
+
 @media (max-width: 51.125rem) {
   .lich {
     margin-top: 4.375rem;
   }
 
   .product {
-    margin-top: 4.375rem;
+    margin-top: 5rem;
   }
 
   .contacts {
@@ -3805,8 +3833,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             animation: wobble-hor-bottom 0.8s both;
   }
 
+  .sub-menu__item:hover {
+    background-color: #073f1e;
+    color: #fff;
+  }
+
   .menu-item__link:hover {
-    font-weight: 500;
+    background-color: #78B400;
+    color: #fff;
   }
 
   .header-page__one:hover,
