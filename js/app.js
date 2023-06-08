@@ -490,7 +490,7 @@
         };
         let bodyLockStatus = true;
         let bodyLockToggle = (delay = 500) => {
-            if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+            if (window.innerWidth < 767.98) if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
         };
         let bodyUnlock = (delay = 500) => {
             let body = document.querySelector("body");

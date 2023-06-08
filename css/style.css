@@ -751,6 +751,10 @@ body::after {
   background-color: yellow;
 }
 
+.sub-menu {
+  pointer-events: none;
+}
+
 .sub-menu__item {
   font-size: 1.125rem;
   font-weight: 600;
@@ -2337,7 +2341,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     height: 40px;
     top: 5.375rem;
     left: -100%;
-    background-color: yellow;
+    background-color: white;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -2345,7 +2349,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
         -ms-transform-origin: left;
             transform-origin: left;
     z-index: 3;
-    border-bottom: grey 1px;
+    border-bottom: rgba(128, 128, 128, 0.6) solid 1px;
   }
 
   .menu-open .header._header-show .menu__body {
@@ -2389,7 +2393,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: flex;
     gap: 1.25rem;
     position: absolute;
-    top: 160%;
+    top: 150%;
     left: -120%;
     padding: 1.25rem;
     background-color: white;
@@ -3085,29 +3089,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 1.25rem;
+    top: 5.375rem;
     left: -100%;
     overflow: auto;
     background: -o-linear-gradient(229deg, rgba(120, 180, 0, 0.95) 0%, rgba(97, 156, 6, 0.95) 9%, rgba(75, 133, 12, 0.95) 31%, rgba(7, 63, 30, 0.95) 90%);
     background: linear-gradient(221deg, rgba(120, 180, 0, 0.95) 0%, rgba(97, 156, 6, 0.95) 9%, rgba(75, 133, 12, 0.95) 31%, rgba(7, 63, 30, 0.95) 90%);
-    padding: 90px 15px 20px 15px;
+    padding: 10px 15px 20px 15px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-transform-origin: left;
         -ms-transform-origin: left;
             transform-origin: left;
-    z-index: 3;
-  }
-
-  .menu__body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5.3125rem;
-    width: 100%;
-    background: #fff;
     z-index: 3;
   }
 
@@ -3965,6 +3958,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     opacity: 1;
     visibility: visible;
     top: 40px;
+    pointer-events: all;
   }
 
   .menu__item.parent:hover::after {
