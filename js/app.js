@@ -378,7 +378,7 @@
     }
     (() => {
         "use strict";
-        const flsModules = {};
+        const modules_flsModules = {};
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
@@ -415,7 +415,7 @@
         function addTouchClass() {
             if (isMobile.any()) document.documentElement.classList.add("touch");
         }
-        function getHash() {
+        function functions_getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
         function setHash(hash) {
@@ -530,7 +530,7 @@
             const tabs = document.querySelectorAll("[data-tabs]");
             let tabsActiveHash = [];
             if (tabs.length > 0) {
-                const hash = getHash();
+                const hash = functions_getHash();
                 if (hash && hash.startsWith("tab-")) tabsActiveHash = hash.replace("tab-", "").split("-");
                 tabs.forEach(((tabsBlock, index) => {
                     tabsBlock.classList.add("_tab-init");
@@ -631,7 +631,7 @@
                 }
             }));
         }
-        function menuClose() {
+        function functions_menuClose() {
             bodyUnlock();
             document.documentElement.classList.remove("menu-open");
         }
@@ -956,8 +956,8 @@
                 this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
             }
         }
-        flsModules.popup = new Popup({});
-        let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
+        modules_flsModules.popup = new Popup({});
+        let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
             const targetBlockElement = document.querySelector(targetBlock);
             if (targetBlockElement) {
                 let headerItem = "";
@@ -982,7 +982,7 @@
                     offset: offsetTop,
                     easing: "easeOutQuad"
                 };
-                document.documentElement.classList.contains("menu-open") ? menuClose() : null;
+                document.documentElement.classList.contains("menu-open") ? functions_menuClose() : null;
                 if (typeof SmoothScroll !== "undefined") (new SmoothScroll).animateScroll(targetBlockElement, "", options); else {
                     let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
                     targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
@@ -1048,11 +1048,11 @@
                         const checkbox = checkboxes[index];
                         checkbox.checked = false;
                     }
-                    if (flsModules.select) {
+                    if (modules_flsModules.select) {
                         let selects = form.querySelectorAll(".select");
                         if (selects.length) for (let index = 0; index < selects.length; index++) {
                             const select = selects[index].querySelector("select");
-                            flsModules.select.selectBuild(select);
+                            modules_flsModules.select.selectBuild(select);
                         }
                     }
                 }), 0);
@@ -1103,7 +1103,7 @@
                     e.preventDefault();
                     if (form.querySelector("._form-error") && form.hasAttribute("data-goto-error")) {
                         const formGoToErrorClass = form.dataset.gotoError ? form.dataset.gotoError : "._form-error";
-                        gotoBlock(formGoToErrorClass, true, 1e3);
+                        gotoblock_gotoBlock(formGoToErrorClass, true, 1e3);
                     }
                 }
             }
@@ -1114,9 +1114,9 @@
                     }
                 }));
                 setTimeout((() => {
-                    if (flsModules.popup) {
+                    if (modules_flsModules.popup) {
                         const popup = form.dataset.popupMessage;
-                        popup ? flsModules.popup.open(popup) : null;
+                        popup ? modules_flsModules.popup.open(popup) : null;
                     }
                 }), 0);
                 formValidate.formClean(form);
@@ -1126,6 +1126,41 @@
                 FLS(`[Форми]: ${message}`);
             }
         }
+        let addWindowScrollEvent = false;
+        function headerScroll() {
+            addWindowScrollEvent = true;
+            const header = document.querySelector("header.header");
+            const headerShow = header.hasAttribute("data-scroll-show");
+            const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
+            const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+            let scrollDirection = 0;
+            let timer;
+            document.addEventListener("windowScroll", (function(e) {
+                const scrollTop = window.scrollY;
+                clearTimeout(timer);
+                if (scrollTop >= startPoint) {
+                    !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
+                    if (headerShow) {
+                        if (scrollTop > scrollDirection) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null; else !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                        timer = setTimeout((() => {
+                            !header.classList.contains("_header-show") ? header.classList.add("_header-show") : null;
+                        }), headerShowTimer);
+                    }
+                } else {
+                    header.classList.contains("_header-scroll") ? header.classList.remove("_header-scroll") : null;
+                    if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
+                }
+                scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
+            }));
+        }
+        setTimeout((() => {
+            if (addWindowScrollEvent) {
+                let windowScroll = new Event("windowScroll");
+                window.addEventListener("scroll", (function(e) {
+                    document.dispatchEvent(windowScroll);
+                }));
+            }
+        }), 0);
         /*!
  * lightgallery | 2.7.1 | January 11th 2023
  * http://www.lightgalleryjs.com/
@@ -2893,6 +2928,6 @@ PERFORMANCE OF THIS SOFTWARE.
         menuInit();
         tabs();
         formSubmit();
-        flsScroll.pageNavigation();
+        headerScroll();
     })();
 })();
