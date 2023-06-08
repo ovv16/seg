@@ -3020,7 +3020,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-@media (max-width: 93.75em) {
+@media (max-width: 96.875em) {
   .lich-articles__item {
     width: 50%;
   }
