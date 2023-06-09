@@ -733,7 +733,10 @@
                     button.classList.remove("active");
                 }));
                 var activeButton = document.querySelector('button[data-filter="' + filterValue + '"]');
-                if (activeButton) activeButton.classList.add("active");
+                if (activeButton) {
+                    activeButton.classList.add("active");
+                    activeButton.click();
+                }
             }
         }));
         class Popup {
