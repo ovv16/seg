@@ -745,7 +745,6 @@ body::after {
 .menu-item__title {
   font-size: 1rem;
   font-weight: normal;
-  border-radius: 0.3125rem;
   background-color: yellow;
 }
 
@@ -757,7 +756,6 @@ body::after {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  border-radius: 0.3125rem;
 }
 
 .sub-menu {
@@ -778,6 +776,15 @@ body::after {
   border-radius: 0.3125rem;
 }
 
+.sub-menu__link {
+  background-color: #073f1e;
+  color: #fff;
+  line-height: 1.6;
+  display: block;
+  padding: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+
 .contacts-icons {
   display: none;
 }
@@ -791,13 +798,13 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.625rem;
+  gap: 0.3125rem;
   margin-bottom: 0.625rem;
 }
 
 .menu-item__item {
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .menu-item__link {
@@ -808,7 +815,6 @@ body::after {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  border-radius: 0.3125rem;
 }
 
 .icon-menu {
@@ -1129,6 +1135,13 @@ body::after {
       align-content: center;
   width: 100vw;
   color: white;
+}
+
+.header-page__block-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
 }
 
 .header-page__one,
@@ -2473,6 +2486,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-right: 3.125rem;
   }
 
+  .header-page__block-one {
+    gap: 5rem;
+  }
+
   .header-page__titel {
     font-size: 2.5rem;
   }
@@ -2712,11 +2729,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .menu-item__list {
     margin-bottom: 0.625rem;
   }
-
-  .menu-item__link {
-    font-size: 0.875rem;
-    color: #fff;
-  }
 }
 
 @media (max-width: 680px) {
@@ -2845,6 +2857,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .footer__bottom {
     padding-right: 1.25rem;
+  }
+
+  .header-page__block-one {
+    gap: 1.25rem;
   }
 
   .header-page__one,
@@ -3046,12 +3062,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 
-@media (max-width: 51.125em) {
-  .menu-item__link {
-    padding: 0;
-  }
-}
-
 @media (max-width: 51.125rem) {
   .lich {
     margin-top: 4.375rem;
@@ -3108,7 +3118,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     overflow: auto;
     background: -o-linear-gradient(229deg, rgba(120, 180, 0, 0.95) 0%, rgba(97, 156, 6, 0.95) 9%, rgba(75, 133, 12, 0.95) 31%, rgba(7, 63, 30, 0.95) 90%);
     background: linear-gradient(221deg, rgba(120, 180, 0, 0.95) 0%, rgba(97, 156, 6, 0.95) 9%, rgba(75, 133, 12, 0.95) 31%, rgba(7, 63, 30, 0.95) 90%);
-    padding: 10px 15px 20px 15px;
+    padding: 10px 15px 150px 15px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -3150,17 +3160,25 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .menu-item__title {
-    font-size: 0.875rem;
     text-align: center;
   }
 
   .sub-menu__link {
+    background-color: none;
     font-size: 1rem;
-    color: yellow;
     font-weight: normal;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+  }
+
+  .menu-item__link {
+    padding: 0;
+  }
+
+  .menu-item__link {
+    font-size: 1rem;
+    color: #fff;
   }
 
   .icon-menu {
@@ -3360,6 +3378,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @supports not (padding-right: clamp( 1.25rem , 0.8819018405rem  +  1.8404907975vw , 3.125rem )) {
     .footer__bottom {
       padding-right: calc(1.25rem + 1.875 * (100vw - 20rem) / 101.875);
+    }
+}
+
+@supports (gap: clamp( 1.25rem , 0.513803681rem  +  3.6809815951vw , 5rem )) {
+    .header-page__block-one {
+      gap: clamp( 1.25rem , 0.513803681rem  +  3.6809815951vw , 5rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , 0.513803681rem  +  3.6809815951vw , 5rem )) {
+    .header-page__block-one {
+      gap: calc(1.25rem + 3.75 * (100vw - 20rem) / 101.875);
     }
 }
 
@@ -4008,7 +4038,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .menu-item__title:hover {
     color: #fff;
-    background-color: #073f1e;
+    background-color: #78B400;
   }
 
   .menu-item__link:hover {
