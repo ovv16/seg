@@ -724,6 +724,18 @@
             }
         }
         gridInit();
+        document.addEventListener("DOMContentLoaded", (function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var filterValue = urlParams.get("filter");
+            if (filterValue) {
+                var buttons = document.querySelectorAll("button[data-filter]");
+                buttons.forEach((function(button) {
+                    button.classList.remove("active");
+                }));
+                var activeButton = document.querySelector('button[data-filter="' + filterValue + '"]');
+                if (activeButton) activeButton.classList.add("active");
+            }
+        }));
         class Popup {
             constructor(options) {
                 let config = {
