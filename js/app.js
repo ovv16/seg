@@ -624,25 +624,12 @@
             }
         }
         function menuInit() {
-            if (document.querySelector(".icon-menu")) {
-                document.addEventListener("click", (function(e) {
-                    if (bodyLockStatus && e.target.closest(".icon-menu")) {
-                        bodyLockToggle();
-                        document.documentElement.classList.toggle("menu-open");
-                    }
-                }));
-                document.addEventListener("DOMContentLoaded", (function() {
-                    var headerScroll = document.querySelector("._header-scroll");
-                    var observer = new MutationObserver((function(mutations) {
-                        mutations.forEach((function(mutation) {
-                            if (mutation.target.classList.contains("_header-scroll")) document.documentElement.classList.remove("menu-open");
-                        }));
-                    }));
-                    observer.observe(headerScroll, {
-                        attributes: true
-                    });
-                }));
-            }
+            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+                if (bodyLockStatus && e.target.closest(".icon-menu")) {
+                    bodyLockToggle();
+                    document.documentElement.classList.toggle("menu-open");
+                }
+            }));
         }
         function functions_menuClose() {
             bodyUnlock();
