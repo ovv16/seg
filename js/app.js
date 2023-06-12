@@ -696,7 +696,7 @@
                 }
             }
         }
-        const elem = document.querySelector(".lich-articles__items");
+        const elem = document.querySelector(".items-articles");
         new Isotope(elem, {
             itemSelector: ".article",
             layoutMode: "fitRows"
