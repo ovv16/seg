@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230609183909">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230612105146">
 	<link rel="shortcut icon" href="favicon.ico">
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js?_v=20230609183909"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js?_v=20230612105146"></script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -80,18 +80,18 @@
 											Лічильники електроенергії
 										</a>
 										<h4 class="menu-item__title">
-											<a href="lichilnuku.html?filter=one_f">
+											<a href="lichilnuku.html?filter=.one-f">
 												Однофазні
 											</a>
 										</h4>
 										<ul class="menu-item__list">
 											<li class="menu-item__item">
-												<a href="100g1y.html" class="menu-item__link">
+												<a href="lichilnuku.html?filter=.one-fy" class="menu-item__link">
 													GAMA 100 G1Y
 												</a>
 											</li>
 											<li class="menu-item__item">
-												<a href="100g1b.html" class="menu-item__link">
+												<a href="lichilnuku.html?filter=.one-fb" class="menu-item__link">
 													GAMA 100 G1B
 												</a>
 											</li>
@@ -102,7 +102,7 @@
 											</li>
 										</ul>
 										<h4 class="menu-item__title">
-											<a href="lichilnuku.html?filter=three_f">
+											<a href="lichilnuku.html?filter=.three-f">
 												Трифазні
 											</a>
 										</h4>
@@ -193,11 +193,25 @@
 				<div class="lich-articles__container">
 					<div class="lich-articles__filter filter-articles">
 						<button data-filter="*" class="filter-articles__item active" type="button">Всі</button>
-						<button data-filter="one_f" class="filter-articles__item one-f" type="button">Однофазні</button>
-						<button data-filter="three_f" class="filter-articles__item three-f" type="button">Трифазні</button>
+						<div class="filter-articles__block one">
+							<button data-filter=".one-f" class="filter-articles__item filter-title" type="button">ОДНОФАЗНІ</button>
+							<div class="filter-articles__subfilter subfilter-one">
+								<button data-filter=".one-fy" class="filter-articles__item" type="button">Серія Y</button>
+								<button data-filter=".one-fb" class="filter-articles__item" type="button">Серія B</button>
+								<button data-filter=".one-fm" class="filter-articles__item" type="button">Серія M</button>
+							</div>
+						</div>
+						<div class="filter-articles__block three">
+							<button data-filter=".three-f" class="filter-articles__item filter-title" type="button">ТРИФАЗНІ</button>
+							<div class="filter-articles__subfilter subfilter-three">
+								<button data-filter=".three-fy" class="filter-articles__item" type="button">Серія Y</button>
+								<button data-filter=".three-fb" class="filter-articles__item" type="button">Серія B</button>
+								<button data-filter=".three-fm" class="filter-articles__item" type="button">Серія M</button>
+							</div>
+						</div>
 					</div>
 					<div class="lich-articles__items">
-						<article data-filter="one_f" class="lich-articles__item article">
+						<article class="lich-articles__item article one-f one-fb">
 							<a href="100g1b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/gama100.webp" type="image/webp"><img src="img/content/lichilnuku/gama100.webp" alt="GAMA100 G1B.154.220.F3.B2.P4.C310.V1"></picture>
@@ -221,7 +235,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="one_f" class="lich-articles__item article">
+						<article class="lich-articles__item article one-f one-fb">
 							<a href="100g1b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/gama100.webp" type="image/webp"><img src="img/content/lichilnuku/gama100.webp" alt="GAMA 100 G1B.151.320.F3.B2.P4.C310.V1"></picture>
@@ -245,7 +259,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="one_f" class="lich-articles__item article">
+						<article class="lich-articles__item article one-f one-fb">
 							<a href="100g1b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/gama100.webp" type="image/webp"><img src="img/content/lichilnuku/gama100.webp" alt="GAMA 100 G1B.164.220.F3.B2.P4.C310.V1"></picture>
@@ -269,7 +283,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="one_f" data-filter="three_n" class="lich-articles__item article">
+						<article class="lich-articles__item article one-f one-fy">
 							<a href="100g1y.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g1y-1.webp" type="image/webp"><img src="img/content/lichilnuku/g1y-1.webp" alt="GAMA 100 G1Y.163.220.F18.B2.P4.C100.V1.R1.H6"></picture>
@@ -293,7 +307,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="one_f" class="lich-articles__item article">
+						<article class="lich-articles__item article one-f one-fm">
 							<a href="100g1y.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g1m-1.webp" type="image/webp"><img src="img/content/lichilnuku/g1m-1.webp" alt="GAMA 100 G1M.153.220.F3.В2.P2.C300.V1"></picture>
@@ -317,7 +331,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="three_f" class="lich-articles__item article">
+						<article class="lich-articles__item article three-f three-fb">
 							<a href="300g3b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="GAMA 300 G3B 144.230.F17.B2.P4.C311.A3.L1"></picture>
@@ -341,7 +355,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="three_f" class="lich-articles__item article">
+						<article class="lich-articles__item article three-f three-fb">
 							<a href="300g3b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="GAMA 300 G3B 147.240.F17.B2.P4.C311.A3.L1"></picture>
@@ -365,7 +379,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="three_f" class="lich-articles__item article">
+						<article class="lich-articles__item article three-f three-fb">
 							<a href="300g3b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="GAMA300 G3B 144.230.F27.B2.P4.C311.A3.L1"></picture>
@@ -389,7 +403,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="three_f" class="lich-articles__item article">
+						<article class="lich-articles__item article three-f three-fb">
 							<a href="300g3b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="GAMA 300 G3B 144.230.F47.B2.P4.C311.A3.L1"></picture>
@@ -413,7 +427,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="three_f" class="lich-articles__item article">
+						<article class="lich-articles__item article three-f three-fb">
 							<a href="300g3b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="GAMA 300 G3B 147.240.F47.B2.P4.C311.A3.L1"></picture>
@@ -437,7 +451,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="three_f" class="lich-articles__item article">
+						<article class="lich-articles__item article three-f three-fb">
 							<a href="300g3b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="GAMA 300 G3B 144.230.F67.B2.P4.C330.A3.L1.М1"></picture>
@@ -461,7 +475,7 @@
 								</div>
 							</a>
 						</article>
-						<article data-filter="three_f" class="lich-articles__item article">
+						<article class="lich-articles__item article three-f three-fb">
 							<a href="300g3b.html" class="article__link">
 								<div class="article__img">
 									<picture><source srcset="img/content/lichilnuku/g3b.webp" type="image/webp"><img src="img/content/lichilnuku/g3b.webp" alt="GAMA 300 G3B 147.240.F67.B2.P4.C330.A3.L1.М1"></picture>
@@ -542,7 +556,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230609183909"></script>
+	<script src="js/app.min.js?_v=20230612105146"></script>
 </body>
 
 </html>

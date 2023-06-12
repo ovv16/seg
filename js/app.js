@@ -696,34 +696,28 @@
                 }
             }
         }
-        function gridInit() {
-            const items = document.querySelector(".lich-articles__items");
-            const itemsGrid = new Isotope(items, {
-                itemSelector: ".article",
-                percentPosition: true,
-                masonry: {
-                    columnWidth: ".lich-articles__item"
-                }
-            });
-            document.addEventListener("click", documentActions);
-            function documentActions(e) {
-                const targetElement = e.target;
-                if (targetElement.closest(".filter-articles__item")) {
-                    const filterItem = targetElement.closest(".filter-articles__item");
-                    const filterValue = filterItem.dataset.filter;
-                    const filterActiveItem = document.querySelector(".filter-articles__item.active");
-                    filterValue === "*" ? itemsGrid.arrange({
-                        filter: ``
-                    }) : itemsGrid.arrange({
-                        filter: `[data-filter="${filterValue}"]`
-                    });
-                    filterActiveItem.classList.remove("active");
-                    filterItem.classList.add("active");
-                    e.preventDefault();
-                }
-            }
-        }
-        gridInit();
+        const elem = document.querySelector(".lich-articles__items");
+        new Isotope(elem, {
+            itemSelector: ".article",
+            layoutMode: "fitRows"
+        });
+        const filterItems = document.querySelectorAll(".filter-articles__item");
+        const itemsGrid = new Isotope(elem, {
+            itemSelector: ".article",
+            layoutMode: "fitRows"
+        });
+        filterItems.forEach((function(filterItem) {
+            filterItem.addEventListener("click", (function(e) {
+                const filter = e.currentTarget.dataset.filter;
+                itemsGrid.arrange({
+                    filter
+                });
+                const filterActiveItem = document.querySelector(".filter-articles__item.active");
+                filterActiveItem.classList.remove("active");
+                filterItem.classList.add("active");
+                e.preventDefault();
+            }));
+        }));
         document.addEventListener("DOMContentLoaded", (function() {
             var urlParams = new URLSearchParams(window.location.search);
             var filterValue = urlParams.get("filter");
@@ -736,6 +730,54 @@
                 if (activeButton) {
                     activeButton.classList.add("active");
                     activeButton.click();
+                    const filterTitleOne = document.querySelector(".filter-articles__block.one .filter-title");
+                    const subfilterOne = document.querySelector(".filter-articles__block.one .subfilter-one");
+                    const filterTitleThree = document.querySelector(".filter-articles__block.three .filter-title");
+                    const subfilterThree = document.querySelector(".filter-articles__block.three .subfilter-three");
+                    const filterButtonAll = document.querySelector('.filter-articles__item[data-filter="*"]');
+                    document.querySelectorAll(".filter-articles__item");
+                    document.addEventListener("click", (function(event) {
+                        const target = event.target;
+                        if (!target.closest(".filter-articles__block.one") && !target.closest(".filter-articles__block.three") && !target.matches('.filter-articles__item[data-filter="*"]')) {
+                            subfilterOne.classList.remove("selected");
+                            subfilterThree.classList.remove("selected");
+                            filterTitleOne.classList.remove("select");
+                            filterTitleThree.classList.remove("select");
+                            filterButtonAll.classList.remove("select");
+                        }
+                    }));
+                    filterTitleOne.addEventListener("click", (function() {
+                        subfilterOne.classList.toggle("selected");
+                        if (subfilterOne.classList.contains("selected")) {
+                            filterTitleOne.classList.add("select");
+                            subfilterThree.classList.remove("selected");
+                            filterTitleThree.classList.remove("select");
+                            filterButtonAll.classList.remove("select");
+                        } else filterTitleOne.classList.remove("select");
+                    }));
+                    filterTitleThree.addEventListener("click", (function() {
+                        subfilterThree.classList.toggle("selected");
+                        if (subfilterThree.classList.contains("selected")) {
+                            filterTitleThree.classList.add("select");
+                            subfilterOne.classList.remove("selected");
+                            filterTitleOne.classList.remove("select");
+                            filterButtonAll.classList.remove("select");
+                        } else filterTitleThree.classList.remove("select");
+                    }));
+                    filterButtonAll.addEventListener("click", (function() {
+                        filterButtonAll.classList.toggle("select");
+                        subfilterOne.classList.remove("selected");
+                        subfilterThree.classList.remove("selected");
+                        filterTitleOne.classList.remove("select");
+                        filterTitleThree.classList.remove("select");
+                    }));
+                    if (activeButton.closest(".filter-articles__block.one")) {
+                        subfilterOne.classList.add("selected");
+                        filterTitleOne.classList.add("select");
+                    } else if (activeButton.closest(".filter-articles__block.three")) {
+                        subfilterThree.classList.add("selected");
+                        filterTitleThree.classList.add("select");
+                    }
                 }
             }
         }));
