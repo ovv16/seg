@@ -1431,8 +1431,8 @@ body::after {
   transition: all 0.3s ease-in-out 0s;
   padding: 0.3125rem 0;
   position: relative;
-  background: -o-linear-gradient(80deg, #78B400 0%, #073f1e 100%);
-  background: linear-gradient(10deg, #78B400 0%, #073f1e 100%);
+  background: -o-linear-gradient(60deg, #78B400 20%, #073f1e 100%);
+  background: linear-gradient(30deg, #78B400 20%, #073f1e 100%);
   -webkit-box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 10px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
           box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 10px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 }
