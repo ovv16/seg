@@ -723,52 +723,62 @@
             var filterValue = urlParams.get("filter");
             if (filterValue) {
                 var buttons = document.querySelectorAll("button[data-filter]");
-                buttons.forEach((function(button) {
-                    button.classList.remove("active");
-                }));
-                var activeButton = document.querySelector('button[data-filter="' + filterValue + '"]');
-                if (activeButton) {
-                    activeButton.classList.add("active");
-                    activeButton.click();
-                    const filterTitleOne = document.querySelector(".filter-articles__block.one .filter-title");
-                    const subfilterOne = document.querySelector(".filter-articles__block.one .subfilter-one");
-                    const filterTitleThree = document.querySelector(".filter-articles__block.three .filter-title");
-                    const subfilterThree = document.querySelector(".filter-articles__block.three .subfilter-three");
-                    const filterButtonAll = document.querySelector('.filter-articles__item[data-filter="*"]');
+                var filterTitleOne, subfilterOne, filterTitleThree, subfilterThree, filterButtonAll;
+                function initializeElements() {
+                    filterTitleOne = document.querySelector(".filter-articles__block.one .filter-title");
+                    subfilterOne = document.querySelector(".filter-articles__block.one .subfilter-one");
+                    filterTitleThree = document.querySelector(".filter-articles__block.three .filter-title");
+                    subfilterThree = document.querySelector(".filter-articles__block.three .subfilter-three");
+                    filterButtonAll = document.querySelector('.filter-articles__item[data-filter="*"]');
                     document.querySelectorAll(".filter-articles__item");
-                    filterTitleOne.addEventListener("click", (function() {
-                        subfilterOne.classList.toggle("selected");
-                        if (subfilterOne.classList.contains("selected")) {
-                            filterTitleOne.classList.add("select");
-                            subfilterThree.classList.remove("selected");
-                            filterTitleThree.classList.remove("select");
-                            filterButtonAll.classList.remove("select");
-                        } else filterTitleOne.classList.remove("select");
+                }
+                function removeActiveClass() {
+                    buttons.forEach((function(button) {
+                        button.classList.remove("active");
                     }));
-                    filterTitleThree.addEventListener("click", (function() {
-                        subfilterThree.classList.toggle("selected");
-                        if (subfilterThree.classList.contains("selected")) {
-                            filterTitleThree.classList.add("select");
-                            subfilterOne.classList.remove("selected");
-                            filterTitleOne.classList.remove("select");
-                            filterButtonAll.classList.remove("select");
-                        } else filterTitleThree.classList.remove("select");
-                    }));
-                    filterButtonAll.addEventListener("click", (function() {
-                        filterButtonAll.classList.toggle("select");
-                        subfilterOne.classList.remove("selected");
-                        subfilterThree.classList.remove("selected");
-                        filterTitleOne.classList.remove("select");
-                        filterTitleThree.classList.remove("select");
-                    }));
-                    if (activeButton.closest(".filter-articles__block.one")) {
-                        subfilterOne.classList.add("selected");
-                        filterTitleOne.classList.add("select");
-                    } else if (activeButton.closest(".filter-articles__block.three")) {
-                        subfilterThree.classList.add("selected");
-                        filterTitleThree.classList.add("select");
+                }
+                function applyFilter(filter) {
+                    var activeButton = document.querySelector('button[data-filter="' + filter + '"]');
+                    if (activeButton) {
+                        activeButton.classList.add("active");
+                        activeButton.click();
+                        if (activeButton.closest(".filter-articles__block.one")) toggleSelectedClass(filterTitleOne, subfilterOne, filterTitleThree, subfilterThree, filterButtonAll); else if (activeButton.closest(".filter-articles__block.three")) toggleSelectedClass(filterTitleThree, subfilterThree, filterTitleOne, subfilterOne, filterButtonAll);
                     }
                 }
+                function toggleSelectedClass(titleElement, subfilterElement, otherTitleElement, otherSubfilterElement, filterButtonElement) {
+                    subfilterElement.classList.toggle("selected");
+                    if (subfilterElement.classList.contains("selected")) {
+                        titleElement.classList.add("select");
+                        otherSubfilterElement.classList.remove("selected");
+                        otherTitleElement.classList.remove("select");
+                        filterButtonElement.classList.remove("select");
+                    } else titleElement.classList.remove("select");
+                }
+                function handleFilterTitleOneClick() {
+                    toggleSelectedClass(filterTitleOne, subfilterOne, filterTitleThree, subfilterThree, filterButtonAll);
+                }
+                function handleFilterTitleThreeClick() {
+                    toggleSelectedClass(filterTitleThree, subfilterThree, filterTitleOne, subfilterOne, filterButtonAll);
+                }
+                function handleFilterButtonAllClick() {
+                    filterButtonAll.classList.toggle("select");
+                    subfilterOne.classList.remove("selected");
+                    subfilterThree.classList.remove("selected");
+                    filterTitleOne.classList.remove("select");
+                    filterTitleThree.classList.remove("select");
+                }
+                function initializeEventHandlers() {
+                    filterTitleOne.addEventListener("click", handleFilterTitleOneClick);
+                    filterTitleThree.addEventListener("click", handleFilterTitleThreeClick);
+                    filterButtonAll.addEventListener("click", handleFilterButtonAllClick);
+                }
+                function applyFilterValue() {
+                    removeActiveClass();
+                    initializeElements();
+                    applyFilter(filterValue);
+                    initializeEventHandlers();
+                }
+                applyFilterValue();
             }
         }));
         class Popup {
