@@ -736,16 +736,6 @@
                     const subfilterThree = document.querySelector(".filter-articles__block.three .subfilter-three");
                     const filterButtonAll = document.querySelector('.filter-articles__item[data-filter="*"]');
                     document.querySelectorAll(".filter-articles__item");
-                    document.addEventListener("click", (function(event) {
-                        const target = event.target;
-                        if (!target.closest(".filter-articles__block.one") && !target.closest(".filter-articles__block.three") && !target.matches('.filter-articles__item[data-filter="*"]')) {
-                            subfilterOne.classList.remove("selected");
-                            subfilterThree.classList.remove("selected");
-                            filterTitleOne.classList.remove("select");
-                            filterTitleThree.classList.remove("select");
-                            filterButtonAll.classList.remove("select");
-                        }
-                    }));
                     filterTitleOne.addEventListener("click", (function() {
                         subfilterOne.classList.toggle("selected");
                         if (subfilterOne.classList.contains("selected")) {
