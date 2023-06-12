@@ -542,10 +542,6 @@ body::after {
   grid-template-columns: 1fr 1.6fr;
   -ms-grid-rows: 1fr 0.5fr 1fr;
   grid-template-rows: 1fr 0.5fr 1fr;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 1.5rem;
@@ -558,6 +554,11 @@ body::after {
 .header__logo span:nth-child(3) {
   -webkit-animation: bounce-in-left 1.1s both;
           animation: bounce-in-left 1.1s both;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .header__logo span:nth-child(1) {
@@ -1363,9 +1364,6 @@ body::after {
 .header-lich__container {
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1375,6 +1373,9 @@ body::after {
   font-weight: 600;
   text-align: center;
   color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .header-lich__block {
